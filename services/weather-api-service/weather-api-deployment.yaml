@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: weather-api-service
-        image: gcr.io/weather-alerts-system/weather-api-service:v1
+        image: gcr.io/weather-alerts-system/weather-api-service:latest
         ports:
         - containerPort: 8080
