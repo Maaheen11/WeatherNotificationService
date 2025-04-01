@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-subscription-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-subscription-service
+  template:
+    metadata:
+      labels:
+        app: user-subscription-service
+    spec:
+      containers:
+      - name: user-subscription-service
+        image: gcr.io/weather-alerts-system/user-subscription-service:v1
+        ports:
+        - containerPort: 8080
